@@ -89,8 +89,8 @@ public class ExpenseServiceImpl implements ExpenseService{
     }
 
     @Override
-    public void updateMultipleExpenses(List<Long> ids, Double amount){
-        expenseRepository.updateMultipleExpenses(ids, amount);
+    public void updateMultipleExpenses(List<Long> ids, Double amount, String descripsion){
+        expenseRepository.updateMultipleExpenses(ids, amount, descripsion);
     }
 
     @Override

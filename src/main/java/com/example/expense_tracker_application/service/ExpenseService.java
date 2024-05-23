@@ -22,6 +22,6 @@ public interface ExpenseService {
     void updateExpenseDate(Long id, LocalDate date);
     void updateExpenseUser(Long id, Long userId);
     void deleteByUser(Long userId);
-    void updateMultipleExpenses(List<Long> ids, Double amount);
+    void updateMultipleExpenses(List<Long> ids, Double amount, String descripsion);
     void deleteById(Long id);
 }
