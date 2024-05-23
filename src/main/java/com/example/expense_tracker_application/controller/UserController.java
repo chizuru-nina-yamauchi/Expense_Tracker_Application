@@ -28,9 +28,8 @@ public class UserController {
         return "user-form";
     }
     @PostMapping
-    public String saveUser(@ModelAttribute("user") User user, Model model) {
+    public String saveUser(@ModelAttribute("user") User user) {
         userService.createUser(user);
-        model.addAttribute("users", userService.getAllUsers());
         return "redirect:/users";
     }
 
@@ -43,16 +42,14 @@ public class UserController {
 
 
     @PostMapping("/update/{id}")
-    public String updateUser(@PathVariable Long id, @ModelAttribute("user") User user, Model model) {
+    public String updateUser(@PathVariable Long id, @ModelAttribute("user") User user) {
         userService.updateUser(id, user);
-        model.addAttribute("users", userService.getAllUsers());
         return "redirect:/users";
     }
 
     @GetMapping("/delete/{id}")
-    public String deleteUser(@PathVariable Long id, Model model) {
+    public String deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
-        model.addAttribute("users", userService.getAllUsers());
         return "redirect:/users";
     }
 
