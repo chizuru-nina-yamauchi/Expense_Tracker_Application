@@ -217,9 +217,14 @@ From here by Chizuru Yamauchi
 ![Expense List](./src/main/resources/pics/pic4.png)
 5. Add Expense
 ![Add Expense](./src/main/resources/pics/pic5.png)
-6. Custom Operations
+
 ![Custom Operations](./src/main/resources/pics/pic6.png)
-![Custom Operations](./src/main/resources/pics/pic7.png)
+
+6. Custom Operations
 ![Custom Operations](./src/main/resources/pics/pic8.png)
+
+
+Category 'Study' is deleted.
+
 ![Custom Operations](./src/main/resources/pics/pic9.png)
 
