@@ -27,6 +27,7 @@ public class UserController {
         model.addAttribute("user", user);
         return "user-form";
     }
+
     @PostMapping
     public String saveUser(@ModelAttribute("user") AppUser user) {
         userService.createUser(user);

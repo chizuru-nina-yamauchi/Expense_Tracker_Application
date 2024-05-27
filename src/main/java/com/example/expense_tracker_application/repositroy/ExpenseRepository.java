@@ -59,8 +59,8 @@ public interface ExpenseRepository extends JpaRepository<Expense, Long> {
     // Todo
     @Modifying
     @Transactional
-    @Query("UPDATE Expense e SET e.amount = :amount, e.description = :descripsion WHERE e.id IN :ids")
-    void updateMultipleExpenses(List<Long> ids, Double amount, String descripsion);
+    @Query("UPDATE Expense e SET e.amount = :amount, e.description = :description WHERE e.id IN :ids")
+    void updateMultipleExpenses(List<Long> ids, Double amount, String description);
 
 
     @Modifying
