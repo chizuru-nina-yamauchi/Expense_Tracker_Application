@@ -8,7 +8,7 @@
 <body>
 <div class="container mt-4">
     <h1 th:text="${user.id == null} ? 'Add New User' : 'Edit User'"></h1>
-    <form th:action="${user.id == null} ? '@{/users} : @{/users/update/{id}(id=${user.id})}" th:object="${user}" method="post">
+    <form th:action="${user.id == null} ? '@{/users}' : '@{/users/update/{id}(id=${user.id})}'" th:object="${user}" method="post">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" id="username" th:field="*{username}" class="form-control" required>

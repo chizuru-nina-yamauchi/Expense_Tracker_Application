@@ -1,7 +1,7 @@
 package com.example.expense_tracker_application.controller;
 
 
-import com.example.expense_tracker_application.model.User;
+import com.example.expense_tracker_application.model.AppUser;
 import com.example.expense_tracker_application.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,26 +23,26 @@ public class UserController {
 
     @GetMapping("/new")
     public String showUserForm(Model model) {
-        User user = new User();
+        AppUser user = new AppUser();
         model.addAttribute("user", user);
         return "user-form";
     }
     @PostMapping
-    public String saveUser(@ModelAttribute("user") User user) {
+    public String saveUser(@ModelAttribute("user") AppUser user) {
         userService.createUser(user);
         return "redirect:/users";
     }
 
     @GetMapping("/edit/{id}")
     public String showEditForm(@PathVariable Long id, Model model) {
-        User user = userService.getUserById(id);
+        AppUser user = userService.getUserById(id);
         model.addAttribute("user", user);
         return "user-form";
     }
 
 
     @PostMapping("/update/{id}")
-    public String updateUser(@PathVariable Long id, @ModelAttribute("user") User user) {
+    public String updateUser(@PathVariable Long id, @ModelAttribute("user") AppUser user) {
         userService.updateUser(id, user);
         return "redirect:/users";
     }

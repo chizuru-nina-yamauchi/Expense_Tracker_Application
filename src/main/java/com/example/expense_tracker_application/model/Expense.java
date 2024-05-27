@@ -16,13 +16,13 @@ public class Expense {
     private LocalDate date;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @JoinColumn(name = "user_id")
+    private AppUser user;
 
     public Expense() {
     }
 
-    public Expense(Double amount, String category, String description, LocalDate date, User user) {
+    public Expense(Double amount, String category, String description, LocalDate date, AppUser user) {
         this.amount = amount;
         this.category = category;
         this.description = description;
@@ -30,7 +30,7 @@ public class Expense {
         this.user = user;
     }
 
-    public Expense(Long id, Double amount, String category, String description, LocalDate date, User user) {
+    public Expense(Long id, Double amount, String category, String description, LocalDate date, AppUser user) {
         this.id = id;
         this.amount = amount;
         this.category = category;
@@ -80,11 +80,12 @@ public class Expense {
         this.date = date;
     }
 
-    public User getUser() {
+
+    public AppUser getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(AppUser user) {
         this.user = user;
     }
 }

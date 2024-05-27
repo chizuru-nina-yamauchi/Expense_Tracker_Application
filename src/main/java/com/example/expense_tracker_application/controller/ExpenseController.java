@@ -3,6 +3,7 @@ package com.example.expense_tracker_application.controller;
 
 import com.example.expense_tracker_application.model.Expense;
 import com.example.expense_tracker_application.service.ExpenseService;
+import com.example.expense_tracker_application.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,9 @@ public class ExpenseController {
     @Autowired
     private ExpenseService expenseService;
 
+    @Autowired
+    private UserService userService;
+
     @GetMapping
     public String listExpenses(Model model) {
         model.addAttribute("expenses", expenseService.getAllExpenses());
@@ -28,6 +32,7 @@ public class ExpenseController {
     public String showExpenseForm(Model model) {
         Expense expense = new Expense();
         model.addAttribute("expense", expense);
+        model.addAttribute("users", userService.getAllUsers());
         return "expense-form";
     }
 
@@ -41,6 +46,7 @@ public class ExpenseController {
     public String showEditForm(@PathVariable Long id, Model model) {
         Expense expense = expenseService.getExpenseById(id);
         model.addAttribute("expense", expense);
+        model.addAttribute("users", userService.getAllUsers());
         return "expense-form";
     }
 
