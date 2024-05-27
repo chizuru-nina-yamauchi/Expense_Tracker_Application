@@ -1,6 +1,11 @@
 # Assignment: Expense Tracker Application
 
 
+Assignment created and guided with README file by Safwan kher(https://github.com/safwan-kher).
+
+---
+README and instruction by Safwan kher.
+
 
 ## Objective
 
@@ -177,3 +182,34 @@ Develop an Expense Tracker application using Spring Boot, Thymeleaf, Bootstrap 5
 
 
 Good luck with your assignment!
+
+
+------
+
+
+From here by Chizuru Yamauchi
+
+
+## Project Instructions
+
+### 1. Set Up the Project
+1. New Project: From IntelliJ IDEA, create a new Maven project.
+2. Dependencies: Add dependencies for Spring Boot, Spring Data JPA, PostgreSQL, Thymeleaf, and Bootstrap 5.
+3. On terminal, git init -> git remote add origin git@URL -> git remote -v -> git pull origin main -> git branch -M main -> git add. -> git commit -m "----" -> git push origin main 
+
+
+### 2. Configure PostgreSQL Database
+1. On terminal, sudo -u postgres psql -> CREATE DATABASE expense_tracker; -> \c expense_tracker -> \q
+
+2. Application Properties: Configure the PostgreSQL database connection in the `application.properties` file.
+
+### 3. Add Java source code and html files
+
+## Result: How it looks like and works
+
+1. Home Page
+![Home Page](./src/main/resources/pics/pic1.png)
+2. User Entry
+3. Add User
+4. Expense Entry
+5. Add User
