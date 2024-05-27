@@ -209,7 +209,17 @@ From here by Chizuru Yamauchi
 
 1. Home Page
 ![Home Page](./src/main/resources/pics/pic1.png)
-2. User Entry
+2. User List
+![User List](./src/main/resources/pics/pic2.png)
 3. Add User
-4. Expense Entry
-5. Add User
+![Add User](./src/main/resources/pics/pic3.png)
+4. Expense List
+![Expense List](./src/main/resources/pics/pic4.png)
+5. Add Expense
+![Add Expense](./src/main/resources/pics/pic5.png)
+6. Custom Operations
+![Custom Operations](./src/main/resources/pics/pic6.png)
+![Custom Operations](./src/main/resources/pics/pic7.png)
+![Custom Operations](./src/main/resources/pics/pic8.png)
+![Custom Operations](./src/main/resources/pics/pic9.png)
+
